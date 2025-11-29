@@ -1,16 +1,17 @@
-## Hi there 👋
+### About Me
 
-<!--
-**ant-cave/ant-cave** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- I'm a high school student from Shenzhen, Guangdong, China.  
+- Self-taught, with some help from AI. My skills and time are limited.  
+- I enjoy writing small, practical tools.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### My Other Accounts
+
+ **Email**:  
+- [ANTmmmmm@outlook.com](mailto:ANTmmmmm@outlook.com)  
+- [ANTmmmmm@126.com](mailto:ANTmmmmm@126.com)
+
+ **GitHub**:  
+- [@ANT-mmmmm](https://github.com/ANT-mmmmm)  
+- [@redirect-to](https://github.com/redirect-to)
