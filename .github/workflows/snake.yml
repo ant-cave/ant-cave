@@ -1,25 +1,49 @@
 name: Generate Snake Animation
 on:
- schedule:
-   - cron: "0 */24 * * *" # 每24小时运行一次
- workflow_dispatch: # 手动触发
- push:
-   branches:
-     - main
+  schedule:
+    - cron: "0 */24 * * *" # 每24小时运行一次
+  workflow_dispatch: # 手动触发
+  push:
+    branches:
+      - main
 jobs:
- generate:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Generate Snake Animation
-       uses: Platane/snk/svg-only@v3
-       with:
-         github_user_name: ${{ github.repository_owner }}
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     - name: Push SVG to Output Branch
-       uses: crazy-max/ghaction-github-pages@v3.1.0
-       with:
-         target_branch: output
-         build_dir: dist
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Snake Animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare output directory (ensure dist exists and contains SVG)
+        shell: bash
+        run: |
+          set -e
+          mkdir -p dist
+          # 常见的输出文件名（如果 action 生成了这个文件就移动）
+          if [ -f github-contribution-grid-snake.svg ]; then
+            mv github-contribution-grid-snake.svg dist/
+          fi
+          # 另外把工作目录下的所有 .svg 文件都移动到 dist（以防文件名不确定）
+          shopt -s nullglob || true
+          for f in ./*.svg; do
+            # 如果文件已经在 dist 中，跳过
+            [ -e "$f" ] || continue
+            mv "$f" dist/ || true
+          done
+          # 列出 dist 内容（方便日志调试）
+          echo "dist contents:"
+          ls -la dist || true
+
+      - name: Push SVG to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
