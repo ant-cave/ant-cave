@@ -39,7 +39,7 @@ jobs:
           ls -la dist/
 
       - name: Push SVG to 'output' branch
-        uses: crazy-max/ghaction-github-pages@v4.1.1  # ✅ 升级到 v4
+        uses: crazy-max/ghaction-github-pages@v4.2.0  # ✅ 升级到 v4
         with:
           target_branch: output
           build_dir: dist
