@@ -16,3 +16,4 @@
 - [@ANT-mmmmm](https://github.com/ANT-mmmmm)  
 - [@redirect-to](https://github.com/redirect-to)
 
+![Snake animation](https://github.com/<your-username>/<your-repo>/raw/output/snake.svg)
