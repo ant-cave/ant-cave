@@ -59,6 +59,10 @@
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/ant-cave/ant-cave/output/github-contribution-grid-snake-dark.svg" alt="snake" />
+</p>
+
+<p align="center">
   <i>Keep coding, keep exploring!</i>
 </p>
 
