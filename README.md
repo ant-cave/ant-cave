@@ -30,8 +30,8 @@
 ## GitHub Stats
 
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=ant-cave&show_icons=true&theme=tokyonight&count_private=true" />
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ant-cave&layout=compact&theme=tokyonight&langs_count=6" />
+  <img height="160em" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=ant-cave&show_icons=true&theme=tokyonight&count_private=true" />
+  <img height="160em" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=ant-cave&layout=compact&theme=tokyonight&langs_count=6" />
 </p>
 
 ## Projects
@@ -58,11 +58,12 @@
   <img src="https://img.shields.io/github/followers/ant-cave?style=flat-square&color=2196F3" alt="Followers" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ant-cave/ant-cave/output/github-contribution-grid-snake-dark.svg" alt="snake" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ant-cave/ant-cave/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ant-cave/ant-cave/output/github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/ant-cave/ant-cave/output/github-contribution-grid-snake.svg" />
+</picture>
 
 <p align="center">
   <i>Keep coding, keep exploring!</i>
 </p>
-
